@@ -14,7 +14,7 @@ body{
     margin: 200px auto;
     max-width: 400px;
     width: 100%;
-    background: white;
+    background: rgb(240, 235, 235);
     padding: 20px;
     min-height: 400px;
 }
@@ -75,3 +75,4 @@ body{
     cursor: pointer;
     background: rgb(187, 98, 98);
 }
+
