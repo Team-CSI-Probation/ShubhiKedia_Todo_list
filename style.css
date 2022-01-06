@@ -5,7 +5,7 @@
     
 }
 body{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-image: linear-gradient(to bottom, rgb(149, 207, 207) 0%, rgb(99, 99, 58) 100%);
 
@@ -56,7 +56,7 @@ body{
 
 .clear_all{
     margin-top: 300px;
-    margin-left: 230px;
+    margin-left: 250px;
     background-image: white;
 }
 
@@ -66,13 +66,16 @@ body{
     height: 30px;
     cursor: pointer;
 }
+.clr_btn:hover{
+    background: rgb(187, 98, 98);
+}
 
-.btnn{
+/* .btnn{
     width: 30px;
     height: 32px;
 }
 .btnn:hover{
     cursor: pointer;
     background: rgb(187, 98, 98);
-}
+} */
 
