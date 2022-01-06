@@ -3,8 +3,12 @@ const addBtn = document.querySelector('.takeInput button');
 const todoList = document.querySelector('.list')
 const clearAll = document.querySelector('.clear_all button');
 
+
+
+
 showTasks();
 
+//function to add tasks
 addBtn.onclick = () => {
     let userData = takeInput.value;
     let getLocalStorage = localStorage.getItem("New todo");
@@ -19,6 +23,7 @@ addBtn.onclick = () => {
     showTasks();
 }
 
+//function to show tasks
 function showTasks(){
     let getLocalStorage = localStorage.getItem("New todo");
     if(getLocalStorage == null){
@@ -29,12 +34,14 @@ function showTasks(){
     }
     let newLiTag = '';
     listArr.forEach((element,index) => {
-        newLiTag += `<li> ${element} <span onclick="deleteTask(${index})"> <i class = "fas fa-trash"></i></span></li>`
+        newLiTag += `<li>  ${element} <span onclick="deleteTask(${index})">  <i class = "fas fa-trash"></i></span></li>`
     });
     todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
     takeInput.value = "";
 }
 
+
+//function to delete tasks
 function deleteTask(index){
     let getLocalStorage = localStorage.getItem("New todo");
     listArr = JSON.parse(getLocalStorage);
@@ -43,6 +50,7 @@ function deleteTask(index){
     showTasks();
 }
 
+//function to clear all tasks
 clearAll.onclick = () => {
     listArr = [];
     localStorage.setItem("New todo", JSON.stringify(listArr));
