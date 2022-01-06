@@ -1,7 +1,7 @@
 const takeInput = document.querySelector('.takeInput input');
 const addBtn = document.querySelector('.takeInput button');
 const todoList = document.querySelector('.list')
-const clearAll = document.querySelector('.clear_all clr_btn');
+const clearAll = document.querySelector('.clear_all button');
 
 showTasks();
 
