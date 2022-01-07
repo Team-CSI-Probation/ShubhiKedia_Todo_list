@@ -31,7 +31,7 @@ function showTasks(){
     }
     let newLiTag = '';
     listArr.forEach((element,index) => {
-        newLiTag += `<li>  ${element} <span onclick="deleteTask(${index})">  <i class = "fas fa-trash"></i></span></li>`
+        newLiTag += `<li> <span onclick="checkTask(${index})"> <i class="far fa-circle"></i></span>${element} <span onclick="deleteTask(${index})">  <i class = "fas fa-trash"></i></span></li>`
     });
     todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
     takeInput.value = "";
@@ -54,17 +54,23 @@ clearAll.onclick = () => {
     showTasks();
 }
 
-//function to check and uncheck:
-function check_uncheck(){
-    let getLocalStorage = localStorage.getItem("New todo");
-    if(getLocalStorage == null){
-        listArr = [];
-    }
-    else{
-        listArr = JSON.parse(getLocalStorage);  //transforming json string in to js object
-    }
-    let newLiTag = '';
-    listArr.forEach((element,index) => {
-        newLiTag += `<li> <i class = "fas fa-circle-thin"></i> ${element} <span onclick="deleteTask(${index})">  </span></li>`
-    });
+function checkTask(index){
+    
 }
+
+
+//function to check and uncheck:
+// function check_uncheck(){
+//     let getLocalStorage = localStorage.getItem("New todo");
+//     if(getLocalStorage == null){
+//         listArr = [];
+//     }
+//     else{
+//         listArr = JSON.parse(getLocalStorage);  //transforming json string in to js object
+//     }
+//     let newLiTag = '';
+//     listArr.forEach((element,index) => {
+//         newLiTag += `<li> <i class = "fas fa-circle-thin"></i> ${element} <span onclick="checkTask(${index})"></span></li>`
+//     });
+//     todoList.innerHTML = newLiTag;
+// }
