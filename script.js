@@ -16,7 +16,7 @@ addBtn.onclick = () => {
         listArr = JSON.parse(getLocalStorage);  //transforming json string in to js object
     }
     listArr.push(userData);
-    localStorage.setItem("New todo", JSON.stringify(listArr)); //transforming js object into a json string
+    localStorage.setItem("New todo", JSON.stringify(listArr)); //stringify-->transforming js object into a json string
     showTasks();
 }
 
@@ -54,9 +54,9 @@ clearAll.onclick = () => {
     showTasks();
 }
 
-function checkTask(index){
+// function checkTask(index){
     
-}
+// }
 
 
 //function to check and uncheck:
