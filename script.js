@@ -3,9 +3,6 @@ const addBtn = document.querySelector('.takeInput button');
 const todoList = document.querySelector('.list')
 const clearAll = document.querySelector('.clear_all button');
 
-
-
-
 showTasks();
 
 //function to add tasks
@@ -55,4 +52,19 @@ clearAll.onclick = () => {
     listArr = [];
     localStorage.setItem("New todo", JSON.stringify(listArr));
     showTasks();
+}
+
+//function to check and uncheck:
+function check_uncheck(){
+    let getLocalStorage = localStorage.getItem("New todo");
+    if(getLocalStorage == null){
+        listArr = [];
+    }
+    else{
+        listArr = JSON.parse(getLocalStorage);  //transforming json string in to js object
+    }
+    let newLiTag = '';
+    listArr.forEach((element,index) => {
+        newLiTag += `<li> <i class = "fas fa-circle-thin"></i> ${element} <span onclick="deleteTask(${index})">  </span></li>`
+    });
 }

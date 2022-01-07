@@ -17,7 +17,6 @@ body{
     background: rgb(240, 235, 235);
     padding: 20px;
     min-height: 100px;
-    
 }
 
 .todo header{
@@ -84,9 +83,7 @@ body{
     background: rgb(187, 98, 98);
 } */
 
-.todo .list{
 
-}
 
 .list li{
     list-style:none;
@@ -113,4 +110,29 @@ body{
 .list li span:hover{
     color: aliceblue;
     background: red;
+}
+
+@media only screen and (max-width:400px) {
+    .todo{
+        max-width: 250px;
+        margin-top: 230px;
+        
+    }
+    .todo header{
+        font-size: 20px;
+
+    }
+    .box{
+        margin-left: 10px;
+        width: 100px;
+        height: 20px;
+    }
+    .add{
+        width: 20px;
+        height: 20px;
+    }
+    .clear_all{
+        margin-left: 100px;
+    }
+
 }
