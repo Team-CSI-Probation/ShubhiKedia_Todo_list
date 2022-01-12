@@ -8,7 +8,6 @@ body{
     height: 100vh;
     width: 100%;
     background-image: linear-gradient(to bottom, rgb(149, 207, 207) 0%, rgb(99, 99, 58) 100%);
-
 }
 .todo{
     margin: 200px auto;
@@ -16,7 +15,7 @@ body{
     width: 100%;
     background: rgb(240, 235, 235);
     padding: 20px;
-    min-height: 100px;
+    min-height: 150px;
 }
 
 .todo header{

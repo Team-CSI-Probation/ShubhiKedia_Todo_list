@@ -31,8 +31,11 @@ function showTasks(){
     }
     let newLiTag = '';
     listArr.forEach((element,index) => {
-        newLiTag += `<li> <span onclick="checkTask(${index})"> <i class="far fa-circle"></i></span>${element} <span onclick="deleteTask(${index})">  <i class = "fas fa-trash"></i></span></li>`
+        newLiTag += `<li> <span onclick="checkTask(${index})"></span> <i class="far fa-circle"></i> ${element} <span onclick="deleteTask(${index})">  <i class = "fas fa-trash"></i></span></li>`
     });
+    // listArr.forEach((element,index) => {
+    //     newLiTag += `<li> <i class = "fas fa-circle-thin"></i> ${element} <span onclick="checkTask(${index})"></span></li>`
+    // });
     todoList.innerHTML = newLiTag; //adding new li tag inside ul tag
     takeInput.value = "";
 }
@@ -54,12 +57,7 @@ clearAll.onclick = () => {
     showTasks();
 }
 
-// function checkTask(index){
-    
-// }
-
-
-//function to check and uncheck:
+// function to check and uncheck:
 // function check_uncheck(){
 //     let getLocalStorage = localStorage.getItem("New todo");
 //     if(getLocalStorage == null){
@@ -74,3 +72,11 @@ clearAll.onclick = () => {
 //     });
 //     todoList.innerHTML = newLiTag;
 // }
+
+function checkTask(index){
+    let getLocalStorage = localStorage.getItem("New todo");
+    listArr = JSON.parse(getLocalStorage);
+    listArr.classList.remove("far fa-circle");
+    listArr.classList.add("fas fa-check-circle");
+    
+}
